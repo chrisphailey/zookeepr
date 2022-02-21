@@ -60,11 +60,11 @@ app.get('/api/animals', (req, res) => {
     res.json(results);
 });
 app.listen(PORT, () => {
-    if (process.env.NODE_ENV === "production") {
-        app.use(express.static("build"));
-        app.get("*", (req, res) => {
-          res.sendFile(path.resolve(__dirname,  "build", "index.html"));
-        });
-      }
+    // if (process.env.NODE_ENV === "production") {
+    //     app.use(express.static("build"));
+    //     app.get("*", (req, res) => {
+    //       res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+    //     });
+    //   }
     console.log(`API server now on port ${PORT}!`);
 });
